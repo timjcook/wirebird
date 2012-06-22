@@ -1,0 +1,33 @@
+  <div class='row'>
+    <div class='span6 offset6'>
+      <div class='row'>
+        <div class='span3 offset3'>
+          <h1>Listing articles</h1>
+        </div>
+      </div>
+      
+      <div class='well'>
+        <div class='row'>
+          <div class='span6'>
+            <table id='articles'>
+              <tr>
+                <th>Title</th>
+                <th>Content</th>
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+            
+            <% @articles.each do |article| %>
+              <tr>
+                <td><%= article.Title %></td>
+                <td><%= article.Content %></td>
+              </tr>
+            <% end %>
+            </table>
+          </div>
+        </div>  
+      </div>
+      <br />
+    </div>
+  </div>
