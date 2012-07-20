@@ -1,5 +1,5 @@
 require 'spec_helper'
 
-describe Article do
+describe BlogPost do
   pending "add some examples to (or delete) #{__FILE__}"
 end

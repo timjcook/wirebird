@@ -1,0 +1,14 @@
+<%= render "shared/navbar" %>
+
+<div class='news_border'>
+  <h1>Blog</h1>
+    <table>
+    <% @blog_posts.each do |blog_post| %>
+      <tr>
+        <td><%= blog_post.Title %></td>
+        <td><%= blog_post.Content %></td>
+      </tr>
+    <% end %>
+    </table>
+
+</div>

@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe "articles/show" do
+describe "blog_posts/show" do
   before(:each) do
-    @article = assign(:article, stub_model(Article,
+    @blog_post = assign(:blog_post, stub_model(BlogPost,
       :Title => "Title",
       :Content => "MyText"
     ))
