@@ -3,6 +3,7 @@ Wirebird::Application.routes.draw do
 
   resources :blog_posts, :path => "blog"
   resources :image, :path => "blog"
+  match 'music' => 'music#index'
 
   ActiveAdmin.routes(self)
 
