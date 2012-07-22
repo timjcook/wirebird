@@ -1,5 +1,8 @@
 Wirebird::Application.routes.draw do
+  resources :photos
+
   resources :blog_posts, :path => "blog"
+  resources :image, :path => "blog"
 
   ActiveAdmin.routes(self)
 

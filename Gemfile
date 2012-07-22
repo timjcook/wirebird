@@ -14,6 +14,9 @@ end
 
 gem 'shoulda'
 
+gem 'rmagick'
+gem "paperclip", "~> 3.0"
+
 gem 'simple_form'
 
 gem 'activeadmin'
