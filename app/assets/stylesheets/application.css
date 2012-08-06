@@ -41,8 +41,24 @@ div.sidebar {
 }
 
 div.rightsidebar {
+  width:400px;
+  height: 750px;
+  background-image: url('facebook_button.png');
   position:absolute;
   right:5px;
+}
+
+div.rightsidebar .facebook img {
+  position: absolute;
+  top: 123px;
+  left: 185px;
+}
+
+div.rightsidebar p.facebook-note {
+  position: absolute;
+  top: 300px;
+  font-size:30px;
+  line-height: 30px;
 }
 
 div.header {

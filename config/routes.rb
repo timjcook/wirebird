@@ -1,4 +1,6 @@
 Wirebird::Application.routes.draw do
+  get "contact/index"
+
   resources :photos
 
   resources :blog_posts, :path => "blog"
