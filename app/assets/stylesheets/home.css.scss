@@ -15,19 +15,25 @@
 }
 
 .splash .logo-front {
-  width: 800px;
+  width: 750px;
   margin: auto;
 }
 
 .splash .album-front { 
   margin: auto;
-  width: 500px;
-  height: 450px;
+  width: 400px;
+  height: 350px;
 }
 
 .splash .swings-front {
   width: 400px;
   margin: auto;
+  margin-bottom: 50px;
+}
+
+.facebook img {
+  height: 100px;
+  width: 100px;
 }
 
 @media screen and (max-width: 900px){

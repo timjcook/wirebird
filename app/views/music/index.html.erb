@@ -1,2 +1,28 @@
+<%= render "shared/sidebar" %>
+<%= render "shared/rightsidebar" %>
 <%= render "shared/navbar" %>
-<iframe width="100%" height="166" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F53701086&amp;auto_play=false&amp;show_artwork=true&amp;color=4a85f0"></iframe>
+
+<div class='content music'>
+  <iframe width="100%" height="166" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F53701086&amp;auto_play=false&amp;show_artwork=true&amp;color=4a85f0"></iframe>
+  
+  <div class='albums'>
+    <table class="album">
+      <tr>
+        <td>
+          <div class='tracklist'>
+            <h2>Swings EP</h2>
+            <ol>
+              <li>Swings</li>
+              <li>Always</li>
+              <li>On Air</li>
+              <li>Wonder</li>
+            </ol>
+          </div>
+        </td>
+        <td>
+          <%= image_tag("frontcoversmall_white.png") %>
+        </td>
+      </tr>
+    </div>
+  </div>    
+</div>

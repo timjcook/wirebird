@@ -15,8 +15,52 @@
 
 
 body { 
-  background-image: url('cardboardtexture.jpg');
-  background-color: #555;
+/*  background-image: url('cardboardtexture.jpg');*/
+  background-color: #92CEDE;
+  color:white;
+  font-family:Helvetica, Arial, san-serif;
+}
+
+a:hover {
+  background-color: #92CEDE;
+}
+
+div.content {
+  margin: auto;
+  width: 50%;
+  background-color:#68BDD4;
+  border:3px solid white;
+}
+
+div.sidebar {
+  width: 400px;
+  height:1000px;
+  position:absolute;
+  left:5px;
+  
+}
+
+div.rightsidebar {
+  position:absolute;
+  right:5px;
+}
+
+div.header {
+  margin: 50px;
+}
+
+div.header ul {
+  width: 50%;
+  margin:auto;
+  text-align:center;
+}
+
+
+div.header a {
+  font-size:24px;
+  padding: 0px 50px;
+  color:white;
+  text-decoration:none;
 }
 
 
