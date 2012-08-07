@@ -30,6 +30,7 @@ div.content {
   width: 50%;
   background-color:#68BDD4;
   border:3px solid white;
+  min-height: 300px;
 }
 
 div.sidebar {
@@ -66,7 +67,7 @@ div.header {
 }
 
 div.header ul {
-  width: 50%;
+  width: 60%;
   margin:auto;
   text-align:center;
 }

@@ -2,24 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-div.content.music {
-  margin: auto;
-  width: 50%;
-  background-color:#92CEDE;
-  border:none;
-}
-
 .albums { 
   background-color:#68BDD4;
   border:3px solid white;
 }
 
-.albums .album img {
+.album .album-art img {
   width:400px;
   height:350px;
 }
 
-.albums .tracklist ol {
+.tracklist ol {
   margin-top: 20px;
   font-size: 20px;
   padding-left: 30px;
