@@ -1,12 +1,12 @@
 Wirebird::Application.routes.draw do
   get "contact/index"
-
-  resources :photos
+  get "photos/index"
 
   resources :blog_posts, :path => "blog"
   resources :image, :path => "blog"
   match 'music' => 'music#index'
   match 'contact' => "contact#index"
+  match 'photos' => "photos#index"
 
   ActiveAdmin.routes(self)
 

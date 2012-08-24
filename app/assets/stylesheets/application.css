@@ -34,15 +34,14 @@ div.content {
 }
 
 div.sidebar {
-  width: 400px;
+  width: 25%;
   height:1000px;
   position:absolute;
   left:5px;
-  
 }
 
 div.rightsidebar {
-  width:400px;
+  width: 25%;
   height: 750px;
   position:absolute;
   right:5px;

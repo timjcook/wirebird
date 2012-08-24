@@ -15,11 +15,12 @@ end
 gem 'shoulda'
 
 gem 'rmagick'
-gem "paperclip", "~> 3.0"
 
 gem 'simple_form'
 
 gem 'activeadmin'
+
+gem 'flickraw'
 
 # Gems used only for assets and not required
 # in production environments by default.

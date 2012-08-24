@@ -1,11 +1,10 @@
-// Place all the styles related to the Photos controller here.
+// Place all the styles related to the photos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-div.content img {
-  display: inline;
-  width:29%;
-  height:29%;
-  margin:2%;
+.gallery img {
+  max-width: 28%;
+  border: 2px solid white;
+  margin: 10px;
 }
+
