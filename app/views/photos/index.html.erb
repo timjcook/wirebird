@@ -4,14 +4,10 @@
 
 <div class="content">
   <div class="gallery">
-    <% @photos.each() do |photo| %>
-      <% info = flickr.photos.getInfo(:photo_id => photo.id)%>
-      <%= image_tag(FlickRaw.url_b(info)) %>
-      <%= image_tag(FlickRaw.url_b(info)) %>
-      <%= image_tag(FlickRaw.url_b(info)) %>
-      <%= image_tag(FlickRaw.url_b(info)) %>
-      <%= image_tag(FlickRaw.url_b(info)) %>
-      <%= image_tag(FlickRaw.url_b(info)) %>
-    <% end %>
+      <% @photos.each() do |photo| %>
+        <% info = flickr.photos.getInfo(:photo_id => photo.id)%>
+        <%= image_tag(FlickRaw.url_b(info)) %>
+        <%= image_tag(FlickRaw.url_b(info)) %>
+      <% end %>
   </div>
 </div>
