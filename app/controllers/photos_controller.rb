@@ -1,6 +1,5 @@
 class PhotosController < ApplicationController
   
-  caches_page :index
   
   def index 
     FlickRaw.api_key="66858a92d30f89139f9bf9c174f75e7a"

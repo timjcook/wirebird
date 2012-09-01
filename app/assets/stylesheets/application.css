@@ -40,6 +40,7 @@ div.content {
 }
 
 div.sidebar {
+  z-index: -1;
   position:absolute;
   left:5px;
 }
@@ -90,9 +91,23 @@ div.header div.menu a {
   text-decoration:none;
 }
 
-@media screen and (min-width:800px){
+@media screen and (min-width:801px){
   ul li {
     display: inline;
+  }
+}
+
+@media screen and (max-width:1450px) and (min-width:1100px) {
+  div.sidebar {
+    left: -20px;
+  }
+}
+
+
+@media screen and (max-width:1100px) and (min-width:800px) {
+  div.sidebar {
+    left: -55px;
+    max-width:350px;
   }
 }
 

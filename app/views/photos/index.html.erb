@@ -6,8 +6,7 @@
   <div class="gallery">
       <% @photos.each() do |photo| %>
         <% info = flickr.photos.getInfo(:photo_id => photo.id)%>
-        <%= image_tag(FlickRaw.url_b(info)) %>
-        <%= image_tag(FlickRaw.url_b(info)) %>
+        <%= link_to(image_tag(FlickRaw.url_b(info)), FlickRaw.url_b(info), :rel => "prettyPhoto") %>
       <% end %>
   </div>
 </div>
