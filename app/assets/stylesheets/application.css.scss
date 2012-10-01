@@ -1,0 +1,93 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_tree
+ *= require_self
+ *= require bootstrap
+*/
+
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+@import "compass/css3/text-shadow";
+@import "compass/utilities/general/clearfix";
+
+$heading-white: #EEE;
+$background-grey: #CCC;
+$font: 'Alegreya';
+
+body {
+  background-image: url('lightpaperfibers-brown.jpg');
+  font-family: $font;
+}
+
+a {
+  font-size: 20px;
+  text-decoration: none;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 90px;
+  color: $heading-white;
+  line-height: 90px;
+  @include single-text-shadow;
+}
+
+h2 {
+  font-size: 48px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+.arrow {
+  width: 0; 
+  height: 0; 
+  border-left: 500px solid transparent;
+  border-right: 500px solid transparent;
+  border-top: 200px solid #86D7AE;
+  z-index: -999;
+  margin: auto;
+  position: absolute;
+  top: 0px;
+  left: 165px;
+}
+
+.header {
+  height: 200px;
+  text-align: center;
+  a {
+    margin: 0 5%;
+    font-weight: bold;
+    font-size: 32px;
+  }
+}
+
+
+.content {
+  margin: 20px auto 60px;
+  width: 60%;
+  padding: 20px 30px 60px;
+}
+
+.round {
+  @include border-radius(20px, 20px);
+  @include single-box-shadow(#333, 3px, 3px);
+  background-color: #FFF; 
+}
+
+/* Headings */
+
+.head {
+  border-bottom: 1px solid #333;
+  padding: 20px 0px;
+}

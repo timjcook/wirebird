@@ -1,8 +1,11 @@
-<div class='content'> 
+<div class='content round'> 
+  <h2 class='head'>Latest News</h2>
   <% @blog_posts.each do |blog_post| %>
     <div class='post'>
-      <h3 class='title'><%= blog_post.Title %></h3>
-      <p class='date'><%= blog_post.updated_at.to_date.to_s(:long) %></p>
+      <div class='info'>
+        <h3 class='title'><%= blog_post.Title %></h3>
+        <p class='date'><%= blog_post.updated_at.to_date.to_s(:long) %></p>
+      </div>
       <p class='post_content'><%= blog_post.Content.html_safe %></p>
     </div>
   <% end %>

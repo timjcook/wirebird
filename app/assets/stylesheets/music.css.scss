@@ -2,3 +2,40 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+@import "compass/utilities/general/clearfix";
+
+iframe {
+  padding: 20px 0px;
+}
+
+.player, .music {
+  margin: 20px 0px;
+}
+
+.music {
+  width: 50%;
+  margin: auto; 
+  .album {
+    background-color: #FFF;
+    @include border-radius(20px, 20px);
+    @include single-box-shadow(#333, 3px, 3px);
+    @include clearfix;
+    .head {
+      text-align: center;
+    }
+    .album-art {
+      padding: 10px 0px;
+      float: right;
+      img {
+        max-width: 300px;;
+      }
+    }
+    .track-list {
+      float: left;
+      padding: 30px 0px; 
+    }
+  }
+}
+

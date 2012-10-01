@@ -2,4 +2,27 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+@import "compass/utilities/general/clearfix";
 
+.gallery {
+  @include clearfix;
+  .photo {
+    float: left;
+    overflow: hidden;
+    margin: 10px;
+    height: 220px;
+    width: 220px;
+    a {
+      img {
+        position:relative;
+        top: 15px;
+        left: 15px;
+        height: 190px;
+        width: 190px;
+        background-color: #FFF;
+      }
+    }
+  }
+}
