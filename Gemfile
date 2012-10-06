@@ -12,7 +12,7 @@ group :development, :test do
   gem 'rspec-rails'
 end
 
-gem 'shoulda'
+gem 'shoulda-matchers'
 
 gem 'rmagick'
 
