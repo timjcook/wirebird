@@ -7,11 +7,141 @@
   <%= csrf_meta_tags %>
   <!-- <link href='http://fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700' rel='stylesheet' type='text/css'> -->
   <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <script type="text/javascript">
+    $(document).ready(function () {
+       $('#wrapper').scrollTo('#home', 0); 
+    });
+  </script>
 </head>
 <body>
 
-<%= render 'shared/navbar' %>
 <%= yield %>
+
+
+<script>
+  $(".welcome").fitText(0.5, { minFontSize: '33px', maxFontSize: '117px' })
+</script>
+<script type="text/javascript">
+function resizePanel() {
+ 
+    //get the browser width and height
+    width = $(window).width();
+    height = $(window).height();
+ 
+    //get the mask width: width * total of items
+    mask_width = width * $('.page').length;
+         
+    //set the dimension 
+    $('#wrapper, .page').css({width: width, height: height});
+    $('#mask').css({width: mask_width, height: height});
+     
+    //if the item is displayed incorrectly, set it to the corrent pos
+    $('#wrapper').scrollTo($('a.selected').attr('href'), 0);
+         
+}
+</script>
+
+<script type="text/javascript">
+   //resize all the items according to the new browser size
+    $(window).resize(function () {
+         
+        //call the resizePanel function
+        resizePanel();
+    });
+
+$(document).ready(function() {
+
+
+ 
+    //get all link with class panel
+    $('a.panel').click(function () {
+ 
+                //reset and highlight the clicked link
+        $('a.panel').removeClass('selected');
+        $(this).addClass('selected');
+         
+        //grab the current item, to be used in resize function
+        current = $(this);
+         
+                //scroll it to the destination
+        $('#wrapper').scrollTo($(this).attr('href'), 1100 , {easing:'easeInOutSine'});// EDIT 1500 TO CHANGE SCROLL SPEED      
+         
+                //cancel the link default behavior
+        return false;
+    });
+ 
+ 
+  
+     
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function () {
+    // Clone portfolio items to get a second collection for Quicksand plugin
+    var $portfolioClone = $(".portfolio-gallery").clone();
+    
+    // Attempt to call Quicksand on every click event handler
+    $(".filter a").click(function(e){
+        
+        $(".filter li").removeClass("current"); 
+        
+        // Get the class attribute value of the clicked link
+        var $filterClass = $(this).parent().attr("class");
+
+        if ( $filterClass == "all" ) {
+            var $filteredPortfolio = $portfolioClone.find("li");
+        } else {
+            var $filteredPortfolio = $portfolioClone.find("li[data-type~=" + $filterClass + "]");
+        }
+        
+        // Call quicksand
+        $(".portfolio-gallery").quicksand( $filteredPortfolio, { 
+            duration: 800, 
+            easing: 'easeInOutQuad' 
+        } , function(){
+              $("a.portfolio-img").fancybox({
+                'titlePosition'     : 'outside',
+                'overlayColor'      : '#000',
+                'overlayOpacity'    : 0.9
+            });
+        });
+
+
+        $(this).parent().addClass("current");
+
+        // Prevent the browser jump to the link anchor
+        e.preventDefault();
+    })
+});
+</script>
+<script type="text/javascript">
+
+    $('.google-maps').gMap(
+{
+     latitude: -40.7142,// CHANGE FOR LOCATION
+     longitude: -74.0064,// CHANGE FOR LOCATION
+     maptype: 'TERRAIN',
+     zoom: 8,
+     controls: {
+         panControl: true,
+         zoomControl: true,
+         mapTypeControl: true,
+         scaleControl: false,
+         streetViewControl: true,
+         overviewMapControl: false
+     }
+});
+
+</script>
+<script type="text/javascript">
+    
+    $("a.portfolio-img").fancybox({
+                'titlePosition'     : 'outside',
+                'overlayColor'      : '#000',
+                'overlayOpacity'    : 0.9
+            });
+
+</script>
 
 </body>
 </html>

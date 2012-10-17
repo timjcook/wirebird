@@ -1,15 +1,5 @@
 Wirebird::Application.routes.draw do
-  get "contact/index"
-  get "photos/index"
-
-  resources :blog_posts, :path => "blog"
-  resources :image, :path => "blog"
-  match 'music' => 'music#index'
-  match 'contact' => "contact#index"
-  match 'photos' => "photos#index"
-
   ActiveAdmin.routes(self)
-
   devise_for :admin_users, ActiveAdmin::Devise.config
 
   # The priority is based upon order of creation:
@@ -61,7 +51,7 @@ Wirebird::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'blog_posts#index'
+  root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"
 
