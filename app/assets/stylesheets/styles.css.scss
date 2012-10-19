@@ -1,62 +1,70 @@
-@font-face {
-    font-family: 'League';
-    src: url('../fonts/league_gothic-webfont.eot');
-    src: url('../fonts/league_gothic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/league_gothic-webfont.woff') format('woff'),
-         url('../fonts/league_gothic-webfont.ttf') format('truetype'),
-         url('../fonts/league_gothic-webfont.svg#LeagueGothicRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'oswaldlight';
-    src: url('../fonts/oswald-light-webfont.eot');
-    src: url('../fonts/oswald-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/oswald-light-webfont.woff') format('woff'),
-         url('../fonts/oswald-light-webfont.ttf') format('truetype'),
-         url('../fonts/oswald-light-webfont.svg#oswaldlight') format('svg');
-    font-weight: normal;
-    font-style: normal;
+@import "compass/css3/text-shadow";
 
-}
+/** Defaults **/
+  $default-text-shadow-color: rgba(black, 0.6);
+  $default-text-shadow-h-offset: 2px;
+  $default-text-shadow-v-offset: 1px;
+
+
+/** Text Colours **/
+$white: #EEE;
+$selected: #75b2f6;
+
+/** Fonts **/
+$font: 'Oswald';  
+ 
 html{
-    background:url('bg.png');
     -webkit-font-smoothing: antialiased;
 }
 body {
     height:100%;
     width:100%;
     margin:0;padding:0;
-    font-family: 'Arial',sans-serif;
-    color:#555555;
+    font-family: $font,'Arial',sans-serif;
+    color: $white;
     font-size: 14px;
     text-shadow: 0 1px 0 white;
 }
 a{
     text-decoration: none;
-    color:#f87c7a;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s;
+    
+    color: $white;
 }
 a:hover{
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s;
-    color:#75b2f6;
 }
 ::selection{
   background:#f87c7a;
 }
 
-.pink{
-    color:#f87c7a;
+h1, h2, h3, a {
+  line-height:100%;
+  
+  @include single-text-shadow; 
 }
-.blue{
-    color:#75b2f6;
+
+h1 {
+  font-size: 110px;
+  text-align: center;
 }
+
+h2 {
+  font-size: 70px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 40px;
+  text-align: center;
+}
+
 #wrapper {
     width:100%;
     height:100%;
@@ -126,50 +134,30 @@ overflow-y: scroll;
     margin-right: auto;
     margin-left: auto;
 }
-h1.welcome{
-    font-family: 'League',Arial,sans-serif;
-    color:#555555;
-    font-size: 117px;
-    text-align: center;
-    width:100%;
-}
-h2.intro1{
-    font-family: 'League',Arial,sans-serif;
-    color:#555555;
-    text-align: center;
-    font-size: 30px;
-    font-weight: normal;
-    font-style: normal;
-    line-height: 30px;
-}
-h3.intro2{
-    font-family: 'oswaldlight',Arial,sans-serif;
-    color:#555555;
-    text-align: center;
-    font-size: 18px;
-    font-weight: normal;
-    font-style: normal;
-}
+
 ul.home-menu{
-    margin-top: 60px;
+  margin: 40px auto auto;
+  width: 61%;
+  height:60px;
 }
 ul.main-menu{
-    width:68%;
-    height:60px;
-    margin-left:auto;
-    margin-right:auto;
+  width: 91%;
+  margin: 0px auto auto;
 }
-ul.main-menu li{
+
+ul.menu {
+  margin-bottom: 20px;
+}
+
+ul.menu li{
     float:left;
     padding-left:30px;
     list-style: none;
 }
-ul.main-menu li:first-child{
+ul.menu li:first-child{
     padding-left:0px;
 }
-ul.main-menu li a{
-    font-family: 'League',Arial,sans-serif;
-    color:#555555;
+ul.menu li a{
     font-weight: normal;
     font-style: normal;
     text-transform: uppercase;
@@ -180,7 +168,7 @@ ul.main-menu li a{
     -o-transition: all 0.5s;
     transition: all 0.5s;
 }
-ul.main-menu li a:hover{
+ul.menu li a:hover{
     color:#f87c7a;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
@@ -190,8 +178,6 @@ ul.main-menu li a:hover{
     /* services styles */
 h1.page-top{
     text-align: center;
-    font-family: 'League',Arial,sans-serif;
-    color:#555555;
     font-weight: normal;
     font-style: normal;
     font-size: 47px;
@@ -246,7 +232,6 @@ h1.page-top{
     }
 .service-item h4{
     margin-bottom:10px;
-    font-family: 'League',Arial,sans-serif;
     font-weight: normal;
     font-style: normal;
     font-size: 21px;
@@ -329,7 +314,6 @@ h1.page-top{
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
 }
 h4.member-name{
-    font-family: 'League',Arial,sans-serif;
     font-weight: normal;
     font-style: normal;
     font-size: 21px;
@@ -337,7 +321,6 @@ h4.member-name{
     text-align: center;
 }
 h5.member-position{
-    font-family: 'oswaldlight',Arial,sans-serif;
     font-weight: normal;
     font-style: normal;
     font-size: 13px;
@@ -362,7 +345,6 @@ ul.portfolio-gallery li{
 }
 #fancybox-title-outside{
         font-size: 18px;
-    font-family: 'oswaldlight',Arial,sans-serif;
 }
 .filter{
     height:30px;
@@ -374,19 +356,17 @@ ul.portfolio-gallery li{
 }
 .filter li a{
     margin-right:12px;
-    color:#555555;
     font-size: 14px;
-    font-family: 'oswaldlight',Arial,sans-serif;
     text-transform: uppercase;
     border-radius: 8px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
 }
 .filter li a:hover{
-    color:#75b2f6;;
+    color:$selected;
 }
 .current a{
-    color:red;
+    color:$selected;
 }
 /* contact form styles */
 
@@ -423,14 +403,12 @@ ul.portfolio-gallery li{
     height:30px; 
     width:260px; 
     padding:5px 8px;
-    font-family: 'oswaldlight',Arial,sans-serif;
 
 }
 .contact_form textarea {
     padding:8px;
     width:350px;
     height:150px;
-    font-family: 'oswaldlight',Arial,sans-serif;
 }
 
     /* form element visual styles */

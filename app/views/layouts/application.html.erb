@@ -5,7 +5,7 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-  <!-- <link href='http://fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700' rel='stylesheet' type='text/css'> -->
+  <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
   <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
   <script type="text/javascript">
     $(document).ready(function () {
@@ -113,34 +113,6 @@ $(document).ready(function () {
         e.preventDefault();
     })
 });
-</script>
-<script type="text/javascript">
-
-    $('.google-maps').gMap(
-{
-     latitude: -40.7142,// CHANGE FOR LOCATION
-     longitude: -74.0064,// CHANGE FOR LOCATION
-     maptype: 'TERRAIN',
-     zoom: 8,
-     controls: {
-         panControl: true,
-         zoomControl: true,
-         mapTypeControl: true,
-         scaleControl: false,
-         streetViewControl: true,
-         overviewMapControl: false
-     }
-});
-
-</script>
-<script type="text/javascript">
-    
-    $("a.portfolio-img").fancybox({
-                'titlePosition'     : 'outside',
-                'overlayColor'      : '#000',
-                'overlayOpacity'    : 0.9
-            });
-
 </script>
 
 </body>
