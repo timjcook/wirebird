@@ -11,7 +11,53 @@ $white: #EEE;
 $selected: #75b2f6;
 
 /** Fonts **/
-$font: 'Oswald';  
+$font: 'Oswald';
+
+/** text styles **/
+
+h1, h2, h3, a, p {
+  @include single-text-shadow; 
+}
+
+h1, h2, h3, a {
+  line-height:100%;
+}
+
+h1 {
+  font-size: 110px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 70px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 40px;
+  text-align: center;
+}
+
+p {
+  font-size: 20px;
+}
+
+/** Page Layout **/
+
+.heading {
+  margin-bottom: 20px;
+}
+
+.content p {
+  margin-top:20px;
+}
+
+/** Contact **/
+img.band {
+  max-width: 400px;
+}
+
+
  
 html{
     -webkit-font-smoothing: antialiased;
@@ -41,29 +87,10 @@ a:hover{
     transition: all 0.5s;
 }
 ::selection{
-  background:#f87c7a;
+  background:#6699FF;
 }
 
-h1, h2, h3, a {
-  line-height:100%;
-  
-  @include single-text-shadow; 
-}
 
-h1 {
-  font-size: 110px;
-  text-align: center;
-}
-
-h2 {
-  font-size: 70px;
-  text-align: center;
-}
-
-h3 {
-  font-size: 40px;
-  text-align: center;
-}
 
 #wrapper {
     width:100%;
@@ -99,32 +126,20 @@ h3 {
     top:700px;
     margin-left: 3000px;
     margin-top: 700px;
-        overflow-y:scroll;
-
 }
-#services{
+#music{
     float:left;
     margin-left:1100px;
     top:1500px;
-    overflow-y: scroll;
-
 }
 #contact{
     float:left;
-    margin-left:1100px;
-    overflow-y: scroll;
+  margin-left:2500px;
+  top:1500px;
 }
-#team{
-    float:left;
-    margin-left:2500px;
-    overflow-y: scroll;
-
-}
-#portfolio{
-float:left;
-margin-left:2500px;
-top:1500px;
-overflow-y: scroll;
+#gigs{
+  float:left;
+  margin-left:1100px;
 }
     /* home styles */
 .logo{
@@ -169,7 +184,7 @@ ul.menu li a{
     transition: all 0.5s;
 }
 ul.menu li a:hover{
-    color:#f87c7a;
+    color:#6699FF;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     -o-transition: all 0.5s;
@@ -188,22 +203,7 @@ h1.page-top{
     margin-left:auto;
     margin-right:auto;
 }
-.services-heading{
-    width:118px;
-}
-.team-heading{
-    width:124px;
-}
-.portfolio-heading{
-    width:137px;
-}
-.contact-heading{
-    width:156px;
-}
-.line-divider{
-    background: url('../images/line-divider.png') repeat-x;
-    background-position: center;
-}
+
 .service-item-area{
     height:100%;
 }
