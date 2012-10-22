@@ -152,9 +152,16 @@ a:hover{
 
 ul.home-menu{
   margin: 40px auto auto;
-  width: 61%;
+  width: 700px;
   height:60px;
+  
+  li {
+    width: 30%;
+  }
 }
+
+
+
 ul.main-menu{
   width: 91%;
   margin: 0px auto auto;
@@ -168,6 +175,7 @@ ul.menu li{
     float:left;
     padding-left:30px;
     list-style: none;
+    text-align:center;
 }
 ul.menu li:first-child{
     padding-left:0px;
