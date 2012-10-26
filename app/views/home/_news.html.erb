@@ -1,0 +1,19 @@
+<% @heading = 'NEWS' %>
+
+<div id="news" class="page clear">
+  <div class="content">
+    <div class='heading'>
+      <%= render 'topmenu' %>
+    </div>
+    <div class='newsitems'>
+      <% @blog_posts.each do |post| %>
+        <div class='newspost'>
+          <span>
+            <h3><%= post.Title %></h3>
+            <p><%= post.updated_at.to_s(:day_month_and_year) %></p>
+          </span>
+          <p><%= post.Content %></p> 
+        </div>
+      <% end %>
+  </div><!-- CONTENT -->
+</div><!-- SERVICES -->
