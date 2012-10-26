@@ -52,6 +52,19 @@ p {
   margin-top:20px;
 }
 
+.page-heading {
+  img {
+    display:inline;
+    max-height: 70px;
+    float: right;
+    margin-left: 10px;
+  }
+  h2 {
+    display:inline;
+    float:right;
+  }
+}
+
 /** Contact **/
 img.band {
   max-width: 400px;

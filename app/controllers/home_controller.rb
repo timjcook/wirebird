@@ -4,7 +4,6 @@ class HomeController < ApplicationController
     @blog_posts = BlogPost.all
     @admin = AdminUser.new(:email => 'test@wirebirdmelbourne.com')
     @admin.save
-     
   end
 
 end
